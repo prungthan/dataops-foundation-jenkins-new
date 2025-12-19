@@ -142,7 +142,7 @@ def deploy_to_database(fact_table, dim_tables):
     server = "10.18.31.211"
     database = 'TestDB'
     username = 'SA'
-    password = os.getenv('DB_PASSWORD')
+    password = os.getenv('DB_PASSWORD', 'Passw0rd123456')
     
     try:
         # Create database engine
