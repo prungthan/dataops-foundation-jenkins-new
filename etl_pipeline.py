@@ -142,7 +142,7 @@ def deploy_to_database(fact_table, dim_tables):
     server = "10.18.31.211"
     database = 'TestDB'
     username = 'SA'
-    password = os.getenv('DB_PASSWORD', 'Passw0rd123456')
+    password = os.getenv('DB_PASSWORD')
     
     try:
         # Create database engine
@@ -165,7 +165,7 @@ def deploy_to_database(fact_table, dim_tables):
         
         # Deploy fact table
         print("\n   📤 Deploying fact table...")
-        fact_table.to_sql('loans_fact_yourname', con=engine, if_exists='replace', index=False)
+        fact_table.to_sql('loans_fact_kimmmm', con=engine, if_exists='replace', index=False)
         print(f"     ✅ loans_fact: {len(fact_table)} records")
         
         print("\n🎉 Database deployment completed successfully!")
